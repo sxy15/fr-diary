@@ -1,7 +1,28 @@
 import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import pluginVue from '@vitejs/plugin-vue'
+import pluginLayouts from 'vite-plugin-vue-layouts'
+import pluginPages from 'vite-plugin-pages'
+import AutoImport from 'unplugin-auto-import/vite'
+import pluginVueRouter from 'unplugin-vue-router/vite'
+import { VueRouterAutoImports } from 'unplugin-vue-router'
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    pluginVue(),
+    pluginLayouts(),
+    pluginPages(),
+    pluginVueRouter({
+      extensions: ['vue', 'md'],
+      dts: 'src/typings/typed-router.d.ts',
+    }),
+    AutoImport({
+      imports: [
+        'vue',
+        '@vueuse/core',
+        '@vueuse/head',
+        VueRouterAutoImports,
+      ],
+      dts: 'src/typings/auto-imports.d.ts',
+    }),
+  ],
 })
