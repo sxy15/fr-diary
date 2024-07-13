@@ -4,7 +4,7 @@
 
 <template>
   <img
-    class="mt-0 block h-40 w-40 md:h-56 md:w-56 object-cover"
+    class="mt-0 block h-[40px] w-[40px] md:h-[56px] md:w-[56px] object-cover"
     src="/logo.png"
     alt=""
   >

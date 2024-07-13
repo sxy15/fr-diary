@@ -2,7 +2,7 @@
   <div class="nav-container">
     <div v-for="item in NAV_TABS">
       <router-link 
-        class="nav-item text-white dark:text-black"
+        class="nav-item"
         :to="item.route"
         replace
         >
@@ -23,7 +23,6 @@
     background: var(--nav-bg);
     border: var(--nav-border);
     border-radius: 24px;
-    display: flex;
     font-size: 14px;
     padding: 4px;
     display: flex;
@@ -42,13 +41,14 @@
     -webkit-box-align: center;
     padding: 0px 16px;
     transition: opacity 0.3s ease 0s;
+    text-decoration: none;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     z-index: 1;
     user-select: none;
-    // color: var(--nav-text);
-    // mix-blend-mode: v-bind();
+    color: var(--nav-text);
+    mix-blend-mode: difference;
   }
 </style>
