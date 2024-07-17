@@ -1,54 +1,89 @@
 <template>
   <div class="nav-container">
-    <div v-for="item in NAV_TABS">
-      <router-link 
-        class="nav-item"
-        :to="item.route"
-        replace
-        >
-        {{ item.label }}
-      </router-link>
-    </div>
     <div class="nav-jello"></div>
+    <div 
+      v-for="(item, i) in NAV_TABS"
+      :key="item.route"
+      class="nav-item"
+      @click="clkNavItem(i)"
+      >
+      {{ item.label }}
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
   import { NAV_TABS } from '~/constant';
+
+  let transformX = ref();
+  const clkNavItem = (i: number) => {
+    transformX.value = `translateX(${(80 + 2) * i}px)`;
+  }
 </script>
 
 <style lang="scss" scoped>
   .nav-container {
     position: relative;
-    background: var(--nav-bg);
-    border: var(--nav-border);
-    border-radius: 24px;
-    font-size: 14px;
-    padding: 4px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    display: inline-flex;
     align-items: center;
-    overflow: hidden;
-    user-select: none;
-    box-shadow: var(--ui-second-box-shadow);
+    gap: 2px;
+    padding: 4px;
+    background-color: #161b22;
+    border-radius: 40px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      pointer-events: none;
+      content: "";
+      border: 1px solid #484f58;
+      -webkit-mask-image: linear-gradient(rgba(0, 0, 0, .08), rgba(0, 0, 0, .04));
+      mask-image: linear-gradient(rgba(0, 0, 0, .08), rgba(0, 0, 0, .04));
+      border-radius: inherit;
+    }
   }
 
   .nav-item {
     position: relative;
+    width: 80px;
+    padding: 7px 0;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #fff;
     cursor: pointer;
-    border-radius: 50px;
-    -webkit-box-align: center;
-    padding: 0px 16px;
-    transition: opacity 0.3s ease 0s;
-    text-decoration: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    user-select: none;
-    color: var(--nav-text);
-    mix-blend-mode: difference;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    transition: background-color .2s;
+  }
+
+  .nav-jello {
+    position: absolute;
+    width: 80px;
+    height: 32px;
+    background: linear-gradient(#fff, hsla(0, 0%, 100%, .5));
+    border-radius: inherit;
+    transition: transform .6s cubic-bezier(.3,0,0,1);
+    transform: v-bind(transformX);
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      pointer-events: none;
+      content: "";
+      background-color: #30363d;
+      background-clip: padding-box;
+      border: 1px solid transparent;
+      border-radius: inherit;
+    }
   }
 </style>
