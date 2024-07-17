@@ -17,6 +17,9 @@ dependencies:
   '@vueuse/head':
     specifier: ^2.0.0
     version: 2.0.0(vue@3.4.31)
+  canvas-effect:
+    specifier: ^0.0.7
+    version: 0.0.7(typescript@5.5.3)
   vue:
     specifier: ^3.4.29
     version: 3.4.31(typescript@5.5.3)
@@ -1448,6 +1451,32 @@ packages:
   /caniuse-lite@1.0.30001641:
     resolution: {integrity: sha512-Phv5thgl67bHYo1TtMY/MurjkHhV4EDaCosezRXgZ8jzA/Ub+wjxAvbGvjoFENStinwi5kCyOYV3mi5tOGykwA==}
     dev: true
+
+  /canvas-effect@0.0.0(typescript@5.5.3):
+    resolution: {integrity: sha512-1ZRkqVEYxcLBWyDyyZG8uCRJBVhyvDtl4uOn+zpoW8ntSF4IponmM1UYrIdqtOyTJ6PwqVb85R6hVJgB8zO+Vg==}
+    dependencies:
+      vue: 3.4.31(typescript@5.5.3)
+    transitivePeerDependencies:
+      - typescript
+    dev: false
+
+  /canvas-effect@0.0.1(typescript@5.5.3):
+    resolution: {integrity: sha512-DMylFB5SH0kLgHEs0J4LTGhbwKch1crqtFWqxZIXrcwS/qvVTjcnPuDczULOgUpAj9V9fydLBov8hKUqoClMpA==}
+    dependencies:
+      canvas-effect: 0.0.0(typescript@5.5.3)
+      vue: 3.4.31(typescript@5.5.3)
+    transitivePeerDependencies:
+      - typescript
+    dev: false
+
+  /canvas-effect@0.0.7(typescript@5.5.3):
+    resolution: {integrity: sha512-7vFqZVbEEZvwlnlA6Zk9Dw2V88TZ8xTguqRJ9oK+Ey/QloDdcH3MKiHv/Iv6txcpqyIppePC05Q2U9QlU5hyew==}
+    dependencies:
+      canvas-effect: 0.0.1(typescript@5.5.3)
+      vue: 3.4.31(typescript@5.5.3)
+    transitivePeerDependencies:
+      - typescript
+    dev: false
 
   /chalk@2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}

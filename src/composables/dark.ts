@@ -19,16 +19,16 @@ export const toggleDark = async ({ clientX: x, clientY: y }: MouseEvent) => {
     `circle(${radius}px at ${x}px ${y}px)`,
   ]
 
-  // @ts-expect-error
+  // @ts-ignore
   await document.startViewTransition(async () => {
     isDark.value = !isDark.value;
     await nextTick();
   }).ready
 
   document.documentElement.animate(
-    {clipPath: isDark.value ? clipPath.reverse() : clipPath},
+    {clipPath: isDark.value ? [...clipPath].reverse() : clipPath},
     {
-      duration: 300,
+      duration: 400,
       easing: 'ease-in',
       pseudoElement: `::view-transition-${isDark.value ? 'old' : 'new'}(root)`,
     }
