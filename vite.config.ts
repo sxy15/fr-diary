@@ -24,7 +24,7 @@ export default defineConfig({
     pluginLayouts(),
     pluginPages(),
     pluginVueRouter({
-      extensions: ['vue', 'md'],
+      extensions: ['.vue', '.md'],
       dts: 'src/typings/typed-router.d.ts',
     }),
     AutoImport({

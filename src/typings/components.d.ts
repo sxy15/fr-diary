@@ -7,6 +7,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    Bento: typeof import('./../components/bento/index.vue')['default']
     DarkToggle: typeof import('./../components/header/dark-toggle.vue')['default']
     Header: typeof import('./../components/header/index.vue')['default']
     Logo: typeof import('./../components/header/logo.vue')['default']

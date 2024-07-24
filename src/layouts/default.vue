@@ -13,7 +13,7 @@
 <template>
   <main class="pt-[80px] h-100vh bg-[var(--background)]">
     <Header />
-
+    <Bento />
     <canvas id="canvas"></canvas>
   </main>
 </template>
