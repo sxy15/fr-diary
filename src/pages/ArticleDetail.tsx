@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router';
 import ReactMarkdown from 'react-markdown';
 import { Layout } from '../components/Layout';
 import { useBlogStore } from '../features/blog/store/useBlogStore';

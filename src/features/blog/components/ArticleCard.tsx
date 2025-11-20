@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { ArrowUpRight } from 'lucide-react';
-import { Post } from '../types';
+import type { Post } from '../types';
 
 interface ArticleCardProps {
   post: Post;

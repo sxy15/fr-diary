@@ -9,4 +9,21 @@ export default defineConfig({
       '@': '/src',
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules/react')) {
+            return 'react'
+          }
+
+          if (id.includes('node_modules')) {
+            return 'vendor'
+          }
+
+          return null
+        }
+      }
+    }
+  }
 })
