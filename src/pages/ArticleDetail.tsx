@@ -42,7 +42,7 @@ export const ArticleDetail: React.FC = () => {
           )}
         </header>
 
-        <div className="prose prose-lg prose-gray dark:prose-invert max-w-none">
+        <div className="prose  prose-lg prose-gray dark:prose-invert max-w-none">
           <ReactMarkdown>{post.content}</ReactMarkdown>
         </div>
 
