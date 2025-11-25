@@ -6,7 +6,7 @@ import { useTheme } from '../hooks/useTheme';
 
 export const Header: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
-  const avatarUrl = 'https://raw.githubusercontent.com/sxy15/bbb/main/assets/c0478e48-0537-2b00-9db1-4f65d467c005.png';
+  const avatarUrl = 'https://raw.githubusercontent.com/sxy15/bbb/main/assets/c514e7ae-9689-bb98-61e8-ba21c34b4292.png';
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-colors duration-300">
