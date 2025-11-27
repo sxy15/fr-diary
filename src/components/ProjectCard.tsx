@@ -30,7 +30,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             </h3>
             <ArrowUpRight className="h-4 w-4 text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity" />
           </div>
-          <p className="mt-2 text-sm text-gray-500 dark:text-gray-400 line-clamp-2">
+          <p className="mt-2 text-sm text-gray-500 dark:text-gray-400 line-clamp-2 h-10">
             {project.description}
           </p>
           {project.tags && (
