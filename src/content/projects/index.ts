@@ -34,10 +34,26 @@ export const projects: Project[] = [
   },
   {
     id: '4',
-    title: '硬字幕合成',
+    title: 'ms2mp4',
     description: '将 mp4 视频和 srt 字幕合成一个新的 mp4 视频。',
     image: 'https://raw.githubusercontent.com/sxy15/bbb/main/assets/3a8e0e56-b09b-874b-0f6d-c8bf5f9d9184.png',
     url: 'https://github.com/sxy15/ms2mp4',
     tags: ['mp4', 'srt']
-  }
+  },
+  {
+    id: '5',
+    title: 'pkg chrome extension',
+    description: 'Chrome浏览器扩展，可加载npm包和CDN文件。',
+    image: 'https://raw.githubusercontent.com/sxy15/bbb/main/assets/43c54ffc-f99f-761d-b546-8f6c4794b069.png',
+    url: 'https://github.com/sxy15/pkg-chrome-extension',
+    tags: ['chrome', 'extension', 'manifest-v3']
+  },
+  {
+    id: '6',
+    title: 'logsty',
+    description: '预设颜色的console.log工具，让控制台输出更加美观和易读。',
+    image: 'https://raw.githubusercontent.com/sxy15/bbb/main/assets/34402509-cb53-ec60-6be6-7b1101a0fc9a.png',
+    url: 'https://github.com/sxy15/logsty',
+    tags: ['console', 'colorful']
+  },
 ];
