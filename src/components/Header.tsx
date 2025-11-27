@@ -8,11 +8,15 @@ export const Header: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
   const avatarUrl = 'https://raw.githubusercontent.com/sxy15/bbb/main/assets/c514e7ae-9689-bb98-61e8-ba21c34b4292.png';
 
+  const handleAvatarClick = () => {
+    window.open('https://github.com/sxy15', '_blank');
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-colors duration-300">
       <div className="flex items-center">
-        <div className="w-10 h-10 rounded-full bg-black dark:bg-white flex items-center justify-center text-white dark:text-black overflow-hidden">
-           <img src={avatarUrl} alt="Logo" className="w-full h-full object-cover" />
+        <div className="w-10 h-10 rounded-full bg-black dark:bg-white flex items-center justify-center text-white dark:text-black overflow-hidden cursor-pointer">
+           <img src={avatarUrl} alt="Logo" className="w-full h-full object-cover" onClick={handleAvatarClick}/>
         </div>
       </div>
 
